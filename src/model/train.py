@@ -9,11 +9,13 @@ import pandas as pd
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 
+import mlflow
+
 
 # define functions
 def main(args):
     # TO DO: enable autologging
-    print("args: ", args)
+    mlflow.autolog()
 
     # read data
     df = get_csvs_df(args.training_data)
